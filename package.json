@@ -1,0 +1,17 @@
+{
+  "name": "jacobheun.com",
+  "version": "1.0.0",
+  "description": "Personal site for @jacobheun",
+  "repository": "https://github.com/jacobheun/jacobheun.com",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.7.0"
+  },
+  "scripts": {
+    "start": "node ./node_modules/gulp/bin/gulp serve",
+    "build": "node ./node_modules/gulp/bin/gulp build"
+  }
+}
