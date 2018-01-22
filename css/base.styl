@@ -1,5 +1,17 @@
 *, *:before, *:after
   box-sizing: border-box
 
+html, body
+  height: 100%
+
 body
-  padding: 10px
+  display: grid
+  grid-template-columns: 1fr 3fr
+
+a
+  color: inherit
+  line-height: 1.2em
+
+  &:hover
+    border-bottom: 3px $yellow solid
+    border-radius: 3px
