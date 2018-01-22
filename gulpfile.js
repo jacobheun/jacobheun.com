@@ -10,7 +10,7 @@ gulp.task('pug', function(){
 });
 
 gulp.task('stylus', function () {
-  return gulp.src('css/**/*.styl')
+  return gulp.src('css/styles.styl')
     .pipe(stylus({
       compress: true
     }))
@@ -19,8 +19,9 @@ gulp.task('stylus', function () {
 
 gulp.task('copy', function() {
   return gulp.src([
-      '_redirects'
-    ])
+      '_redirects',
+      'images/**'
+    ], {base: "."})
     .pipe(gulp.dest('build'));
 });
 
