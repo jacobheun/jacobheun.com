@@ -17,6 +17,13 @@ gulp.task('stylus', function () {
     .pipe(gulp.dest('build/css'));
 });
 
+gulp.task('copy', function() {
+  return gulp.src([
+      '_redirects'
+    ])
+    .pipe(gulp.dest('build'));
+});
+
 gulp.task('dev_server', function () {
   connect.server({
     name: 'Dev server',
@@ -31,6 +38,6 @@ gulp.task('watch', function () {
   gulp.watch(['css/**'], ['stylus']);
 });
 
-gulp.task('build', [ 'pug', 'stylus' ]);
+gulp.task('build', [ 'pug', 'stylus', 'copy' ]);
 gulp.task('serve', [ 'build', 'dev_server', 'watch' ]);
 gulp.task('default', [ 'build' ]);
