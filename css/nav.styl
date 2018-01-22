@@ -1,11 +1,26 @@
 nav
   background: $slate-gray
+  box-shadow: 3px 0 6px rgba(0,0,0,.3)
   color: white
-  padding: 20px
+
+  li
+    border: 0 solid #a3ddff
+    border-width: 1px 0 0 0
+    padding: 10px
+
+    &:last-child
+      border-width: 1px 0 1px 0
+
+    a
+      display: block
+      hover-highlight($yellow)
+
+      span
+        position: relative
 
 img.profile
-  display: grid;
-  border: 3px solid white;
-  border-radius: 50%;
-  margin: 10px auto;
-  width: 50%;
+  display: grid
+  border: 3px solid white
+  border-radius: 50%
+  margin: 20px auto
+  width: 50%
